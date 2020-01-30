@@ -14,7 +14,7 @@ def play(songs)
   song = nil
   
   songs.each_with_index do |s, i|
-    if i+1 == Integer(input)
+    if input == (i+1).to_s
       song = s
     elsif input == s
       song = s
