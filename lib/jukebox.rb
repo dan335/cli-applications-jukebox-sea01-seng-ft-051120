@@ -20,8 +20,25 @@ def help
 end
 
 
-def play
+def play(songs)
+  puts "Please enter a song name or number:"
+  input = gets.strip
   
+  song = nil
+  
+  songs.each_with_index do |s, i|
+    if i == Integer(input)
+      song = s
+    elsif input == s
+      song = s
+    end
+  end
+  
+  if song == nil
+    puts "Invalid input, please try again"
+  else
+    puts "Playing #{song}"
+  end
 end
 
 
@@ -33,7 +50,7 @@ end
 
 
 def exit_jukebox
-  
+  puts "Goodbye"
 end
 
 
