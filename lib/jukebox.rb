@@ -26,6 +26,9 @@ end
 
 
 def list(songs)
+  songs.each_with_index do |
+  
+  
   i = 0
   while i < songs.length do
     puts "#{i+1}. #{songs[i]}"
