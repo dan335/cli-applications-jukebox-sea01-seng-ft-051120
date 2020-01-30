@@ -55,5 +55,22 @@ end
 
 
 def run
+  puts "Please enter a command:"
   
+  isRunning = true
+  
+  while isRunning do
+    input = gets.strip
+    
+    if input == "help"
+      help
+    elsif input == "play"
+      play(songs)
+    elsif input == "list"
+      list(songs)
+    elsif input == "exit"
+      exit_jukebox
+      isRunning = false
+    end
+  end
 end
