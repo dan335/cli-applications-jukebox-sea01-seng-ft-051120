@@ -25,8 +25,12 @@ def play
 end
 
 
-def list
-  
+def list(songs)
+  i = 0
+  while i < songs.length do
+    puts "#{i+1}. #{songs[i]}"
+    i += 1
+  end
 end
 
 
